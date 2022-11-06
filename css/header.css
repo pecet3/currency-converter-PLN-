@@ -11,4 +11,6 @@
 .header__title {
     font-family: 'Dosis', sans-serif;
     font-size: 40px;
+    font-weight: 300;
+    margin:0 auto;
 }
