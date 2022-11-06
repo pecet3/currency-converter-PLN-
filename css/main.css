@@ -1,0 +1,25 @@
+.main{
+    max-width: 650px;
+    margin:0 auto;
+    background-color: antiquewhite;
+    border-radius: 10px;
+    padding: 5px 15px 10px;
+    text-align: left;
+    border: 1px solid;
+}
+
+.main__container{
+    margin: 20px auto;
+}
+
+.main__container--finalAmount{
+    text-align: center;
+    font-size: 19px;
+    background-color: rgb(218, 205, 188);
+    border-radius: 10px;
+    padding: 1px;
+    max-width: 400px;
+
+}
+
+

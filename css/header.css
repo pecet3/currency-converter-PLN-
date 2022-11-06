@@ -1,0 +1,14 @@
+.header {
+    margin: 30px auto;
+    padding: 10px;
+    max-width: 330px;
+    border-radius:10px;
+    background-color:hsl(34, 78%, 85%);
+    border: 1px solid;
+
+}
+
+.header__title {
+    font-family: 'Dosis', sans-serif;
+    font-size: 40px;
+}

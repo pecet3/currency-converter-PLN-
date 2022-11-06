@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/header.css" />
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/footer.css" />
+    <link rel="stylesheet" href="/css/form.css" />
+    <script defer src="js/script.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dosis&family=Lato:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <title>Kalkulator Walut</title>
+  </head>
+
+  <body class="body">
+    <header class="header">
+      <span class="header__title">Kalkulator walut</span>
+    </header>
+    <main class="main">
+      <div class="main__container">
+        <p>
+          Witaj w prostym kalkulatorze walut stworzonym na potrzeby nauki
+          frontendu. Z czasem planuję go rozwijać dodając kolejne waluty oraz
+          integrację z API Narodowego Banku Polskiego. Baw się dobrze i mam
+          nadzieję, że podawanę kwoty będą wysokie 😎.
+        </p>
+      </div>
+      <div class="main__container">
+        <form class="form js-form">
+          <fieldset class="form__fieldset">
+            <legend class="form__legend">Wybierz walutę do obliczeń</legend>
+            <p>
+              <span class="form__labelText">Waluta:</span
+              ><select class="form__field js-currency" name="currency">
+                <option class="form__option" value="USD">
+                  Dolar Amerykański
+                </option>
+                <option class="form__option" value="EUR" selected>Euro</option>
+                <option class="form__option" value="GBP">Funt Angielski</option>
+              </select>
+            </p>
+          </fieldset>
+
+          <fieldset class="form__fieldset">
+            <legend class="form__legend">
+              Wpisz swój kapitał do przeliczenia
+            </legend>
+            <p>Jaką walutę posiadasz?
+                <label class="form__label form__label--radio">
+                  <input
+                    type="radio"
+                    name="operationType"
+                    value="toPLN"
+                    class="js-operationFromPLN form__radio"
+                  />PLN
+                  <input
+                    type="radio"
+                    name="operationType"
+                    value="fromPLN"
+                    class="js-operationToPLN form__radio"
+                    checked
+                  /><span class="js-currencyField">EUR</span>
+                </label>
+              </p>
+            <p>
+              <label class="form__label">
+                <span class="form__labelText">Ilość:</span>
+                <input
+                  type="number"
+                  class="form__field js-amount"
+                  min="0.00"
+                  step="0.01"
+                  value="0"
+                />
+              </label>
+            </p>
+          </fieldset>
+
+          <p class="form__textDataInfo">kursy pochodzą z dnia 03.11.2022</p>
+        </form>
+      </div>
+      <div class="main__container main__container--finalAmount">
+        <p>
+          <strong class="js-amountCurrencyField currencyField">0.00 EUR</strong>
+          jest warte:
+          <strong class="js-resultField resultField">0.00 PLN</strong>
+        </p>
+      </div>
+    </main>
+    <footer class="footer">
+      <p>Jakub Pacewicz 2022 ©</p>
+    </footer>
+  </body>
+</html>
