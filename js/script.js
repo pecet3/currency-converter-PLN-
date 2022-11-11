@@ -7,19 +7,18 @@
   const currency = document.querySelector(".js-currency");
   const formElement = document.querySelector(".js-form");
 
-  // calculate functions needed for convert function
+  // calculate functions needed for recognizeThenInit function
 
   const calculateIntoPLN = (amount, rate) => {
-    let result = amount * rate;
-    return result;
+    return amount * rate;
+    
   };
   const calculateFromPLN = (amount, rate) => {
-    let result = amount / rate;
-    return result;
+    return amount / rate;
   };
 
-  // convert function recognizes what currency we want to convert
-  const convert = () => {
+  // recognizeThenInit function recognizeThenInits what currency we want to recognizeThenInit then initiales calcutale function
+  const recognizeThenInit = () => {
     const rateEUR = 4.7;
     const rateGBP = 5.38;
     const rateUSD = 4.82;
@@ -42,23 +41,23 @@
           return calculateFromPLN(amount.value, rateGBP);
       }
     }
-  }
+  };
 
   // type into field functions
 
   const typeFormCurrencyField = () => {
     const FormCurrencyField = document.querySelector(".js-FormCurrencyField");
     FormCurrencyField.innerText = currency.value;
-  }
+  };
 
   const typeResultField = () => {
     const resultField = document.querySelector(".js-resultField");
     if (operationToPLN.checked) {
-      resultField.innerText = `${convert().toFixed(2)} PLN`;
+      resultField.innerText = `${recognizeThenInit().toFixed(2)} PLN`;
     } else if (operationFromPLN.checked) {
-      resultField.innerText = `${convert().toFixed(2)} ${currency.value}`;
+      resultField.innerText = `${recognizeThenInit().toFixed(2)} ${currency.value}`;
     }
-  }
+  };
 
   const typeAmountCurrencyField = () => {
     const amountCurrencyField = document.querySelector(".js-amountCurrencyField");
@@ -71,22 +70,22 @@
         ? (amountCurrencyField.innerText = "0.00 PLN")
         : (amountCurrencyField.innerText = `${amount.value} PLN`);
     }
-  }
+  };
 
   //event function
 
   const formElementInput = () => {
     typeFormCurrencyField();
-    convert();
+    recognizeThenInit();
     typeResultField();
     typeAmountCurrencyField();
-  }
+  };
 
   //main function
   init = () => {
     formElement.addEventListener("input", formElementInput);
     console.log("Witaj w konsoli, mało kto tu zagląda ;O")
-  }
+  };
 
   init();
 }
