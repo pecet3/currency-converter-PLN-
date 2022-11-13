@@ -7,4 +7,4 @@ https://pecet3.github.io/currency-converter-PLN-/
 Because I'm learning frontend and it was one of the homeworks.
 I'd like to add integration with WebAPI of Polish National Bank in the future, but I cannot to do it yet :)
 ## Animated Screenshot
-![](images/readme_gif.gif)
+![](images/readme.gif)
