@@ -74,7 +74,9 @@
 
   //event function
 
-  const formElementInput = () => {
+  const formElementInput = (event) => {
+    event.preventDefault()
+
     typeFormCurrencyField();
     recognizeThenInit();
     typeResultField();
@@ -89,3 +91,4 @@
 
   init();
 }
+
