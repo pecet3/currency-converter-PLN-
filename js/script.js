@@ -20,8 +20,8 @@
   // recognizeThenInit function recognizeThenInits what currency we want to recognizeThenInit then initiales calcutale function
   const recognizeThenInit = () => {
     const rateEUR = 4.7;
-    const rateGBP = 5.38;
-    const rateUSD = 4.82;
+    const rateGBP = 5.47;
+    const rateUSD = 4.59;
     if (operationToPLN.checked) {
       switch (currency.value) {
         case "USD":
