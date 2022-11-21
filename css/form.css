@@ -23,6 +23,7 @@
     background-color: rgb(212, 212, 212);
     border: 2px double rgb(192, 192, 192);
     border-radius: 5px;
+    width:200px
 }
 
 .form__labelText {
@@ -33,7 +34,10 @@
     padding: 10px;
     font-size: 18px;
 }
-
+.form__labelText--curency{
+    font-size: 16px;
+    display:block;
+}
 
 .form__textDataInfo{
     text-align: right;
@@ -41,12 +45,20 @@
     font-size: 13px;
 }
 
-.form__label {
-    padding: 15px;
-}
 
 .form__label--radio {
     max-width: 30px;
     text-align: center;
     margin: 0 auto;
+}
+
+.form__container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.form__container--currency{
+    margin-bottom:10px;
+} 
+.form__containerElement{
+    align-self: center;
 }

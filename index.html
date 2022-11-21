@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
     integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <meta property="og:image" content="images/OGimage.png" />  
+  <meta property="og:image" content="images/OGimage.png" />
   <link rel="icon" href="images/icon.png">
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/header.css" />
@@ -41,6 +41,7 @@
         <fieldset class="form__fieldset">
           <legend class="form__legend">Wybierz walutę do obliczeń</legend>
           <p>
+          <div class="form__container">
             <span class="form__labelText">Waluta:</span><select class="form__field js-currency" name="currency">
               <option class="form__option" value="USD">
                 Dolar Amerykański
@@ -48,6 +49,7 @@
               <option class="form__option" value="EUR" selected>Euro</option>
               <option class="form__option" value="GBP">Funt Angielski</option>
             </select>
+          </div>
           </p>
         </fieldset>
 
@@ -55,17 +57,29 @@
           <legend class="form__legend">
             Wpisz swój kapitał do przeliczenia
           </legend>
-          <p>Jaką walutę posiadasz?
-            <label class="form__label form__label--radio">
-              <input type="radio" name="operationType" value="toPLN" class="js-operationFromPLN form__radio" />PLN
-              <input type="radio" name="operationType" value="fromPLN" class="js-operationToPLN form__radio"
-                checked /><span class="js-FormCurrencyField">EUR</span>
-            </label>
+          <p>
+          <div class="form__container form__container--currency">
+            <div class="form__containerElement">
+              <span class="form__labelText form__labelText--curency">Jaką walutę posiadasz?</span>
+            </div>
+            <div class="form__containerElement">
+              <label class="form__label form__label--radio">
+                <input type="radio" name="operationType" value="toPLN" class="js-operationFromPLN form__radio" />PLN
+                <input type="radio" name="operationType" value="fromPLN" class="js-operationToPLN form__radio"
+                  checked /><span class="js-FormCurrencyField">EUR</span>
+              </label>
+            </div>
+          </div>
           </p>
           <p>
             <label class="form__label">
-              <span class="form__labelText">Ilość:</span>
-              <input type="number" class="form__field js-amount" min="0.00" step="0.01" value="0" />
+              <div class="form__container">
+                <div class="form__containerElement">
+                  <span class="form__labelText">Ilość:</span>
+                </div>
+                <div class="form__containerElement"><input type="number" class="form__field js-amount" min="0.00"
+                    step="0.01" value="0" /></div>
+              </div>
             </label>
           </p>
         </fieldset>
